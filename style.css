@@ -1,0 +1,90 @@
+:root{
+  --bg:#eef1f2; --panel:#ffffff; --ink:#14232b; --muted:#53636b;
+  --coolant:#0e7c86; --coolant-dark:#0a5c64; --amber:#e8a317; --line:#c9d2d6;
+  --head:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow",Arial,Helvetica,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* Header */
+header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--head);font-size:1.7rem;font-weight:700;letter-spacing:.5px;text-decoration:none}
+.logo span{color:var(--amber)}
+nav ul{display:flex;gap:22px;list-style:none;align-items:center}
+nav a{text-decoration:none;font-weight:500}
+nav a:hover{color:var(--amber)}
+.btn{display:inline-block;background:var(--amber);color:var(--ink);font-weight:600;padding:12px 24px;border-radius:4px;text-decoration:none;border:0;cursor:pointer;font:600 1rem var(--body)}
+.btn:hover{background:#f5b72e}
+.btn.ghost{background:transparent;color:#fff;border:2px solid #fff}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+nav .btn{padding:8px 16px}
+
+/* Hero */
+.hero{background:var(--ink);color:#fff;padding:64px 0 72px;border-bottom:8px solid var(--amber)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+h1{font-family:var(--head);font-size:clamp(2.8rem,7vw,5rem);line-height:1;font-weight:700}
+.hero p{margin:18px 0 28px;color:#c7d3d8;max-width:46ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Service price board */
+.board{background:var(--panel);color:var(--ink);border-radius:6px;padding:26px;border-top:6px solid var(--coolant);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.board h2{font-family:var(--head);font-size:1.6rem;margin-bottom:10px}
+.board li{list-style:none;display:flex;align-items:baseline;gap:8px;padding:9px 0}
+.board li::after{content:"";order:2;flex:1;border-bottom:2px dotted var(--line)}
+.board li b{order:3;font-weight:600;white-space:nowrap}
+.board li span{order:1}
+.board small{display:block;margin-top:10px;color:var(--muted)}
+
+/* Sections */
+section{padding:72px 0}
+h2.title{font-family:var(--head);font-size:clamp(2rem,4.5vw,3rem);line-height:1.05;margin-bottom:12px}
+.lead{color:var(--muted);max-width:56ch;margin-bottom:36px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--panel);padding:26px;border-left:6px solid var(--coolant);border-radius:4px}
+.card h3{font-family:var(--head);font-size:1.5rem;margin-bottom:6px}
+.card p{color:var(--muted)}
+.card.wash{border-left-color:var(--amber)}
+
+/* Engine wash band */
+.band{background:var(--coolant-dark);color:#fff}
+.band .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.band p{color:#d5ecee;margin-bottom:14px}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.steps li::before{content:counter(s);font-family:var(--head);font-weight:700;font-size:1.4rem;color:var(--amber);min-width:24px}
+
+/* Why choose us */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.why div{border-top:3px solid var(--ink);padding-top:12px}
+.why h3{font-family:var(--head);font-size:1.3rem}
+.why p{color:var(--muted);font-size:.95rem}
+
+/* Contact */
+.contact{background:var(--panel)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+label{display:block;font-weight:600;margin:14px 0 4px}
+input,select,textarea{width:100%;padding:11px 12px;border:2px solid var(--line);border-radius:4px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--coolant);outline:none}
+form .btn{margin-top:18px;width:100%}
+.info p{margin-bottom:10px}
+.info strong{display:block;font-family:var(--head);font-size:1.25rem}
+#msg{margin-top:12px;font-weight:600;color:var(--coolant-dark)}
+
+/* Footer */
+footer{background:var(--ink);color:#9fb0b7;text-align:center;padding:24px 20px;font-size:.9rem}
+
+/* Mobile */
+@media (max-width:820px){
+  .hero .wrap,.band .wrap,.contact .wrap{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr 1fr}
+  nav ul li:not(:last-child){display:none}
+  section{padding:52px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

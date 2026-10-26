@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto Express | Car Servicing & Engine Wash</title>
+<meta name="description" content="Auto Express offers full car servicing, oil changes, brake checks and professional engine wash. Book your service today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="logo">AUTO<span>EXPRESS</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#engine-wash">Engine wash</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn" href="#contact">Book now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Quick service. Clean engine. Back on the road.</h1>
+        <p>Auto Express looks after your car with honest servicing and a professional engine wash. Most services are finished the same day.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Book a service</a>
+          <a class="btn ghost" href="tel:+254700000000">Call us</a>
+        </div>
+      </div>
+      <aside class="board" aria-label="Price list">
+        <h2>Service price list</h2>
+        <ul>
+          <li><span>Oil and filter change</span><b>KSh 3,500</b></li>
+          <li><span>Full car service</span><b>KSh 8,000</b></li>
+          <li><span>Engine wash</span><b>KSh 1,500</b></li>
+          <li><span>Brake inspection</span><b>KSh 1,000</b></li>
+          <li><span>Battery check</span><b>Free</b></li>
+        </ul>
+        <small>Prices start from. Final cost depends on your vehicle.</small>
+      </aside>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <h2 class="title">What we do</h2>
+      <p class="lead">Everything your car needs to stay reliable, from a routine check to a full service.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Full car service</h3>
+          <p>Oil, filters, spark plugs, fluids, tyres and a complete safety check.</p>
+        </article>
+        <article class="card">
+          <h3>Oil change</h3>
+          <p>Quality engine oil and a new filter, matched to your car's requirements.</p>
+        </article>
+        <article class="card">
+          <h3>Brakes and suspension</h3>
+          <p>We inspect pads, discs and shock absorbers and tell you what needs fixing.</p>
+        </article>
+        <article class="card">
+          <h3>Diagnostics</h3>
+          <p>Warning light on? We scan your car and explain the fault in plain words.</p>
+        </article>
+        <article class="card">
+          <h3>Battery and electrics</h3>
+          <p>Battery testing, replacement, lights and alternator checks.</p>
+        </article>
+        <article class="card wash">
+          <h3>Engine wash</h3>
+          <p>Safe degreasing and rinse that removes oil, grease and dirt from your engine bay.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="engine-wash" class="band">
+    <div class="wrap">
+      <div>
+        <h2 class="title">Why wash your engine?</h2>
+        <p>A clean engine runs cooler, makes leaks easy to spot and keeps its resale value. Our team protects the sensitive parts before any water touches them.</p>
+        <a class="btn" href="#contact">Book an engine wash</a>
+      </div>
+      <ol class="steps">
+        <li>Cover the battery, fuse box and air intake</li>
+        <li>Apply engine degreaser and let it soak</li>
+        <li>Rinse with low-pressure water</li>
+        <li>Dry with air and dress the plastics</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="title">Why drivers choose Auto Express</h2>
+      <p class="lead">Simple, honest and fast.</p>
+      <div class="why">
+        <div><h3>Trained mechanics</h3><p>Experienced technicians who work on most makes and models.</p></div>
+        <div><h3>Clear pricing</h3><p>You approve the cost before any work begins.</p></div>
+        <div><h3>Same-day service</h3><p>Most jobs are ready within hours, not days.</p></div>
+        <div><h3>Quality parts</h3><p>Genuine or trusted-brand parts, with a service warranty.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div>
+        <h2 class="title">Book your car in</h2>
+        <form id="bookForm">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" required autocomplete="tel">
+
+          <label for="service">Service needed</label>
+          <select id="service" name="service">
+            <option>Full car service</option>
+            <option>Oil change</option>
+            <option>Engine wash</option>
+            <option>Brakes and suspension</option>
+            <option>Diagnostics</option>
+            <option>Other</option>
+          </select>
+
+          <label for="date">Preferred date</label>
+          <input id="date" name="date" type="date">
+
+          <label for="notes">Car make, model and notes</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+
+          <button class="btn" type="submit">Send booking request</button>
+          <p id="msg" role="status"></p>
+        </form>
+      </div>
+      <div class="info">
+        <h2 class="title">Visit us</h2>
+        <p><strong>Address</strong>Auto Express, Your Street, Your Town</p>
+        <p><strong>Phone / WhatsApp</strong><a href="tel:+254790432014">+254 790432014</a></p>
+        <p><strong>Email</strong><a href="mailto:info@autoexpress.co.ke">info@autoexpress.co.ke</a></p>
+        <p><strong>Opening hours</strong>Monday to Saturday, 7:30 am to 6:00 pm<br>Sunday: closed</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>&copy; <span id="yr"></span> Auto Express. All rights reserved.</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Sends the booking to WhatsApp.
+// Replace 254700000000 with your own number (country code, no + or spaces).
+document.getElementById('bookForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = e.target;
+  var text = 'Hello Auto Express, I would like to book.%0A' +
+    'Name: ' + encodeURIComponent(f.name.value) + '%0A' +
+    'Phone: ' + encodeURIComponent(f.phone.value) + '%0A' +
+    'Service: ' + encodeURIComponent(f.service.value) + '%0A' +
+    'Date: ' + encodeURIComponent(f.date.value || 'Any') + '%0A' +
+    'Notes: ' + encodeURIComponent(f.notes.value);
+  
+})
+<script type="Module" src="auto.js">
+</body>
+</html>
